@@ -1,0 +1,17 @@
+{
+    "user_type": "bonnie",
+    "message_summary": "What kind of venue do you imagine ?",
+    "message_detail_type": 7,
+    "list_with_checkboxes": false,
+    "list_with_icons": false,
+    "list_with_images_checkbox": true,
+    "message_detail_list": [
+        {"label": "Swanky restaurent that impresses", "checked": false, "url": "https://assets.bonappetit.com/photos/57d6cf19abffea600db60d2b/master/w_1086,h_804,c_limit/landing-page-cocktail-hour.jpg"},
+        {"label": "outdoorsy farm-to-table vibe", "checked": false, "url": "https://cdn.eventplanner.net/imgs/rt8303_how-to-communicate-efficiently-with-guest-speakers-at-events@2x.jpg"},
+        {"label": "Festive midscale restaurant", "checked": false, "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmTsnzKLVMbD-VwSo85i41dAcrVJ5t5fm-4A&usqp=CAU"},
+        {"label": "Upscale lounge with food on screen", "checked": false, "url": "https://assets.bonappetit.com/photos/57d6cf19abffea600db60d2b/master/w_1086,h_804,c_limit/landing-page-cocktail-hour.jpg"},
+        {"label": "Super down to earth", "checked": false, "url": "https://cdn.eventplanner.net/imgs/rt8303_how-to-communicate-efficiently-with-guest-speakers-at-events@2x.jpg"},
+        {"label": "Borrowed office space", "checked": false, "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmTsnzKLVMbD-VwSo85i41dAcrVJ5t5fm-4A&usqp=CAU"}
+        
+    ]
+}

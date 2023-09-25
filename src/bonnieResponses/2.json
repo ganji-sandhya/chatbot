@@ -1,0 +1,15 @@
+{
+    "user_type": "bonnie",
+    "message_summary": "What are the goals of the event?",
+    "message_detail_type": 2,
+    "list_with_checkboxes": true,
+    "list_with_icons": false,
+    "message_detail_list": [
+        {"label": "to reconnect", "checked": false},
+        {"label": "generate new leads", "checked": false},
+        {"label": "convert your sales pipeline", "checked": false},
+        {"label": "all of the above", "checked": false},
+        {"label": "something else", "checked": false},
+        {"label": "generate new leads", "checked": false}
+    ]
+}

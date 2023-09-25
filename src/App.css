@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chatbot-app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #f5f6f9;
+  color: #555b64;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  margin: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5rem;
+  overflow-y:scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-footer {
+  width:100%;
+  margin-top: auto;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+button {
+  border:none;
+  background: none;
+}
+button:hover,
+button:active {
+  cursor: pointer;
+  border: 1px solid #555b64;
+}
+li {
+  list-style: none;
+}
+
+hr {
+  border: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+p {
+  margin: 0;
 }

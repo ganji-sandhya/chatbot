@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 3rem;
+    background-color: #fff;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.button-container { 
+    position: absolute;
+    right: 0;
+    padding: 1.5rem;
+}
+.btn {
+    width: 4rem;
+    height: 3rem;
+    border: 1px solid #e5e7eb;
+    color: #000;
+    margin-left: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+}

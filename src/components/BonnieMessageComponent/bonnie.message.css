@@ -1,0 +1,79 @@
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bonnie-Message {
+  width: 100%;
+}
+
+.bonnie-suggestions-list,
+.suggestion {
+  margin-bottom: 0.5rem;
+}
+
+.bonnie-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.checkbox-item {
+  flex: 1; /* Each item will take up an equal amount of space */
+  min-width: calc(50% - 1rem);
+}
+
+.checkbox-item input {
+  margin-right: 0.5rem;
+}
+
+.bonnie-message .user-profile-icon {
+  background-color: #fdb813;
+}
+
+.message-details {
+  margin-left: 3rem;
+}
+
+.venue-checkbox {
+  margin-right: 0.5rem;
+}
+
+.venue-item {
+  flex: 5;
+  width: calc(80% - 0.5rem);
+  margin: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.venue-item .img-container img {
+  max-width: 17rem;
+}
+
+.icon-pen {
+  background-image: url("../../assets/pen.svg");
+}
+
+.icon-calender {
+  background-image: url("../../assets/calender.svg");
+}
+
+.icon-person {
+  background-image: url("../../assets/person.svg");
+}
+
+.icon-suitcase {
+  background-image: url("../../assets/suitcase.svg");
+}
+
+.icon-graph {
+  background-image: url("../../assets/trend.svg");
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+}
+.suggestion .icon {
+    margin-right: 0.5rem;
+}

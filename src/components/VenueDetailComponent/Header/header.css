@@ -1,0 +1,36 @@
+.venue-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.rating {
+	margin-right: 0.3rem;
+}
+.ratings-container,.rating {
+	align-items: center;
+    display: flex;
+}
+.icon-close {
+ background-image: url("../../../assets/close.svg");    
+}
+
+.icon-star-full {
+  background-image: url("../../../assets/star-full.svg");
+}
+
+.icon-star-empty {
+  background-image: url("../../../assets/star-ratings-svgrepo-com.svg");
+}
+
+.icon-star-half {
+  background-image: url("../../../assets/star-half.svg");
+}

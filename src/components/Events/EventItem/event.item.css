@@ -1,0 +1,21 @@
+
+
+.calender-icon {
+    background-image: url('../../../assets/calendar-symbol-svgrepo-com.svg');
+}
+
+.favorite-icon {
+    background-image: url('../../../assets/favorite.svg');
+    margin-left: auto;
+}
+
+.event {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.event-name {
+    padding-left: 0.5rem;
+}

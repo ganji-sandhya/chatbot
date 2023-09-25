@@ -1,0 +1,20 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 100vw;
+  height: 100vh;
+  background: #5f5757;
+  z-index: 1000;
+  }
+  
+.icon {
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  display: block;
+}
