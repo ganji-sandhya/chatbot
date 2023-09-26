@@ -20,7 +20,8 @@ const MessageInputBox = (props) => {
         })
       );
       inputEl.current.val= "";
-      setTimeout(()=> {dispatch(messageActions.addMessage(utils.addBonnieResponse(messages)))}, 1000);
+      let bonnieMessage = utils.addBonnieResponse(messages);
+      bonnieMessage && setTimeout(()=> {dispatch(messageActions.addMessage(bonnieMessage))}, 1000);
     }
   };
   return (

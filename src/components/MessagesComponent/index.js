@@ -14,7 +14,7 @@ const Messsages = () => {
   return (
     <>
     {
-        messages.map((message, index) => message.user_type === "bonnie" ? <BonnieMessageComponent key={index}  {...message} /> : <UserMessageComponent key={index} {...message} />)
+        messages.map((message, index) => message && message.user_type === "bonnie" ? <BonnieMessageComponent key={index}  {...message} /> : <UserMessageComponent key={index} {...message} />)
     }
     <div ref={messageEnd}></div>
     </>

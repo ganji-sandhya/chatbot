@@ -60,3 +60,11 @@ hr {
 p {
   margin: 0;
 }
+
+a  {
+  color: #555b64;
+}
+
+a:active, a:hover {
+  color: #000;
+}

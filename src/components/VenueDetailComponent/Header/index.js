@@ -5,15 +5,15 @@ const RatingsComponent = (props) => {
         let i=1, stars=[];
 
         while(i<props.ratings) {
-            stars.push(<span className="icon icon-star-full"></span>);
+            stars.push(<span key={i} className="icon icon-star-full"></span>);
             i++;
         }
         if(props.rating-i === 0.5) {
-            stars.push(<span className="icon icon-star-half"></span>);
+            stars.push(<span  key={i}className="icon icon-star-half"></span>);
             i++;
         }
         while(i < 6) {
-            stars.push(<span className="icon icon-star-empty"></span>);
+            stars.push(<span  key={i} className="icon icon-star-empty"></span>);
             i++;
         }
 		return stars;

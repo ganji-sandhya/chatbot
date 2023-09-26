@@ -52,13 +52,12 @@
   width: calc(50% - 1rem);
 }
 
-.venue-description {
-    line-height: 1.5rem;
-    height: 4.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
+.venue-description {
+	max-height: 4.5rem;
+	overflow:hidden;
+	line-height:1.5rem;
+}
 .footer-button-contaier {
 	text-align:center;
 }
@@ -68,4 +67,30 @@
 }
 .footer-button-contaier .customize-with-bonnie {
 	margin-right: 0.5rem;
+}
+
+.venue-description p::after {
+    content: "...Read More";
+    position: absolute;
+    top: 9.3rem;
+    right: 2rem;
+    background-color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-right: 6px;
+}
+
+/* Show the full paragraph when the pseudo-element is clicked */
+.venue-description.open p::after {
+  content: "";
+}
+
+/* Show the full paragraph when the pseudo-element is clicked */
+.venue-description.open p {
+  max-height: none;
+  overflow: visible;
+}
+.venue-description.open {
+	  max-height: none;
+  overflow: visible;
 }

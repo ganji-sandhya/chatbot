@@ -15,7 +15,15 @@ const BonnieMessageComponent = (props) => {
     const messages = useSelector((state) => state.messages);
     const onDateChange = (value) => {
         onChange(value);
-        setTimeout(()=> {dispatch(messageActions.addMessage(utils.addBonnieResponse(messages)))}, 1000);
+        addNextBonnieResponse();
+    }
+    const addNextBonnieResponse = (message) => {
+        if(message) {
+            setTimeout(()=> {dispatch(messageActions.addMessage(message))}, 1000);
+        } else {
+
+            setTimeout(()=> {dispatch(messageActions.addMessage(utils.addBonnieResponse(messages)))}, 1000);
+        }
     }
     return (
         <div className="bonnie-message" >
@@ -25,8 +33,9 @@ const BonnieMessageComponent = (props) => {
                 {props.message_summary_date && <div className="message-date"><DatePicker onChange={onDateChange} value={value} /></div>}
             </div>
             <div className="message-details">
-            {props.message_detail_type === 1 && <FirstBonnieMessageDetail {...props} />}
-            {props.message_detail_type !== 1 && <MessageDetailWithCheckboxes {...props} />}
+            {props.message_detail_type === 1 && <FirstBonnieMessageDetail {...props}  />}
+            {props.message_detail_type !== 1 && <MessageDetailWithCheckboxes {...props} messages={messages}
+            nextBonnieResponse={addNextBonnieResponse} />}
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import fivth from "../bonnieResponses/5.json";
 import sixth from "../bonnieResponses/6.json";
 import seventh from "../bonnieResponses/7.json";
 import eighth from "../bonnieResponses/8.json";
+import nineth from "../bonnieResponses/9.json";
 
 const utils =  {
     addBonnieResponse(messages) {
@@ -37,8 +38,11 @@ const utils =  {
         case 8: 
          bonnieMessage = eighth;
          break;
+         case 9: 
+          bonnieMessage = nineth;
+          break;
          default: 
-         console.log("nothing to do");
+         //nothing
       }
       return bonnieMessage;
     }

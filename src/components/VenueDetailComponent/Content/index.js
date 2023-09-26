@@ -1,9 +1,16 @@
 import "./content.css";
+import {useState} from 'react';
+
 const VenueContent = (props) => {
+const [isOpen, setIsOpen] = useState(false);
+
+  const togglePseudoElement = () => {
+    setIsOpen(!isOpen);
+  };
 
     return(
         <div className="venue-content">
-            <div className="venue-description"><p>{props.description}</p></div>
+            <div className={`venue-description ${isOpen ? 'open' : ''}`}><p onClick={togglePseudoElement}>{props.description}</p><a href="javascript:void(0)" onClick={togglePseudoElement}>Close</a></div>
             <hr />
             <div className="venue-button-container">
                 <button className="btn"><span className="icon icon-video"></span>Video tour</button>
