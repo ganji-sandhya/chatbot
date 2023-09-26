@@ -3,12 +3,16 @@ import "./message.input.css";
 import { useDispatch, useSelector } from "react-redux";
 import { messageActions } from "../../store";
 import utils from "../../utils/messageUtils";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 const MessageInputBox = (props) => {
   const dispatch = useDispatch();
   const inputEl = useRef(null);
+  const [inputValue, setInputValue] = useState('');
 
   const messages = useSelector((state) => state.messages);
+  const handleInputChange=(event) => {
+    setInputValue(event.target.value);
+  }
   const onKeyDown = (e) => {
     if (e.keyCode === 13 && e.target.value.trim().length > 0) {
       e.stopPropagation();
@@ -22,6 +26,7 @@ const MessageInputBox = (props) => {
       inputEl.current.val= "";
       let bonnieMessage = utils.addBonnieResponse(messages);
       bonnieMessage && setTimeout(()=> {dispatch(messageActions.addMessage(bonnieMessage))}, 1000);
+      setInputValue('');
     }
   };
   return (
@@ -31,6 +36,8 @@ const MessageInputBox = (props) => {
         name="user-message"
         placeholder="Message Bonnie"
         onKeyDown={onKeyDown}
+        onChange={handleInputChange}
+        value={inputValue}
       />
       <button className="send">
         <span className="icon send-button"></span>

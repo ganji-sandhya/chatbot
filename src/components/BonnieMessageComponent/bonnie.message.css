@@ -77,3 +77,11 @@
 .suggestion .icon {
     margin-right: 0.5rem;
 }
+
+.message-date {
+  margin-left: auto;
+}
+
+.message-date input {
+  height: 1.5rem;
+}

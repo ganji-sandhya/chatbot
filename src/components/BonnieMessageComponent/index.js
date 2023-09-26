@@ -1,21 +1,22 @@
-import DatePicker from "react-date-picker";
 import UserProfileIcon from "../UserProfileIcon"
 import FirstBonnieMessageDetail from "./FirstBonnieMessage"
 import MessageDetailWithCheckboxes from "./Message_Detail_With_checkboxes";
 import { messageActions } from "../../store";
 import "./bonnie.message.css";
-import 'react-date-picker/dist/DatePicker.css';
-import 'react-calendar/dist/Calendar.css';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { useDispatch, useSelector } from "react-redux";
 import utils from "../../utils/messageUtils";
 import { useState } from "react";
 const BonnieMessageComponent = (props) => {
-    const [value, onChange] = useState(new Date());
     const dispatch = useDispatch();
     const messages = useSelector((state) => state.messages);
-    const onDateChange = (value) => {
-        onChange(value);
-        addNextBonnieResponse();
+    const [startDate, setStartDate] = useState();
+    const onDateChange = (date) => {
+        setStartDate(date);
+        if(props.message_detail_type === messages[messages.length -1].message_detail_type) {
+            addNextBonnieResponse();
+        }
     }
     const addNextBonnieResponse = (message) => {
         if(message) {
@@ -30,7 +31,7 @@ const BonnieMessageComponent = (props) => {
             <div className="message-header">
                 <UserProfileIcon />
                 <div className="Message-summary"><p>{props.message_summary}</p></div>
-                {props.message_summary_date && <div className="message-date"><DatePicker onChange={onDateChange} value={value} /></div>}
+                {props.message_summary_date && <div className="message-date"><DatePicker selected={startDate} placeholderText={"Select a date"} onChange={onDateChange} /></div>}
             </div>
             <div className="message-details">
             {props.message_detail_type === 1 && <FirstBonnieMessageDetail {...props}  />}
