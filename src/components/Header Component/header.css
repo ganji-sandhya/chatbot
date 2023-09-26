@@ -1,7 +1,7 @@
 .header {
     display: flex;
     flex-wrap: wrap;
-    height: 48px;
+    height: 4rem;
     background-color: #fff;
     margin: 0.5rem;
     padding: 0.5rem;

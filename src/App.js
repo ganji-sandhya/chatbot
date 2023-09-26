@@ -27,7 +27,7 @@ function App() {
   ];
   const VenueDetails = {
     images: {
-      imgLarge: "http://www.montalbaarchitects.com/images/newsdataimage_4496.jpg",
+      imgLarge: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F08%2Fnobu-hotel-palo-alto-montalba-architects-001.jpg?cbr=1&q=90",
       imgs: [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStLM-kygEIkTPNuLea03XC1wqJ9jpB_JBtVA&usqp=CAU",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDBztrKZtGWU2_FcoEeUFOjjGoJZuj2MOXTw&usqp=CAU",
